@@ -112,12 +112,12 @@ box-shadow: 0 8px 22px rgba(201, 24, 74, 0.45);
 .single-img {
 width: 100%;
 height: 320px;
-object-fit: cover;
+object-fit: contain;
 border-radius: 20px;
 margin-bottom: 20px;
 border: 4px solid white;
 box-shadow: 0 8px 16px rgba(0,0,0,0.1);
-background-color: #ffe3ec;
+background: linear-gradient(45deg, #ffe5ec, #ffb3c6);
 }
 
 .collage-grid {
@@ -130,11 +130,11 @@ margin-bottom: 20px;
 .collage-grid img {
 width: 100%;
 height: 160px;
-object-fit: cover;
+object-fit: contain;
 border-radius: 12px;
 border: 3px solid white;
 box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-background-color: #ffe3ec;
+background: linear-gradient(45deg, #ffe5ec, #ffb3c6);
 }
 
 /* Secret Cards Grid */
@@ -191,7 +191,7 @@ to { transform: translateY(-12px); }
 
 <div class="page active" id="page1">
 <h1>Hyy Hafsa ❤️</h1>
-<img src="https://assets.oneit.la/share/hafsa_main.png" class="single-img" alt="Hafsa Main Pic">
+<img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='75'>👑</text></svg>" class="single-img" alt="Birthday Queen">
 <p>Happy Birthday! Today is all about celebrating you and the beautiful energy you bring into the world. Here’s a little collection of some of your best moments — a small gift for someone who deserves nothing but the best</p>
 <button class="btn" onclick="nextPage(2)">Open Memories ✨</button>
 </div>
@@ -199,10 +199,10 @@ to { transform: translateY(-12px); }
 <div class="page" id="page2">
 <h2>Birthday Memories 📸</h2>
 <div class="collage-grid">
-<img src="https://assets.oneit.la/share/hafsa_1.png" alt="Memory 1">
-<img src="https://assets.oneit.la/share/hafsa_2.png" alt="Memory 2">
-<img src="https://assets.oneit.la/share/hafsa_3.png" alt="Memory 3">
-<img src="https://assets.oneit.la/share/hafsa_main.png" alt="Memory 4">
+<img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='75'>🌸</text></svg>" alt="Memory 1">
+<img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='75'>🎈</text></svg>" alt="Memory 2">
+<img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='75'>🧸</text></svg>" alt="Memory 3">
+<img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='75'>🎉</text></svg>" alt="Memory 4">
 </div>
 <p>Seeing you smile makes everything perfect. Thank you for bringing so much joy into my life and for being the wonderful person you are.</p>
 <button class="btn" onclick="nextPage(3)">Read My Heart 💖</button>
@@ -210,7 +210,7 @@ to { transform: translateY(-12px); }
 
 <div class="page" id="page3">
 <h2>Why You're Special 🌟</h2>
-<img src="https://assets.oneit.la/share/hafsa_1.png" class="single-img" alt="Hafsa Special Pic">
+<img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='75'>✨</text></svg>" class="single-img" alt="Special Card">
 <p>Click on the cards to reveal why you are the absolute best!</p>
 <div class="cards-grid">
 <div class="secret-card" onclick="revealCard(this, 'Your Beautiful Eyes 🥺')">?</div>
@@ -223,7 +223,7 @@ to { transform: translateY(-12px); }
 
 <div class="page" id="page4">
 <h2>The Final Surprise</h2>
-<img src="https://assets.oneit.la/share/hafsa_2.png" class="single-img" style="height:250px;" alt="Hafsa Gift Pic">
+<img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='75'>🎂</text></svg>" class="single-img" style="height:250px;" alt="Birthday Cake">
 <p>Tap the gift box below to open your final birthday wish!</p>
 <div class="gift-box" id="gift" onclick="openGift()">🎁</div>
 
