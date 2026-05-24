@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday Hafsa! ❤️</title>
+<style>
+:root {
+--pink-light: #ffe3ec;
+--pink-medium: #ffb3c6;
+--pink-dark: #ff4d6d;
+--pink-deep: #c9184a;
+}
+
+* {
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+background: linear-gradient(135deg, #ffe5ec, #ffc2d1);
+min-height: 100vh;
+display: flex;
+justify-content: center;
+align-items: center;
+overflow-x: hidden;
+position: relative;
+}
+
+.hearts-bg {
+position: absolute;
+width: 100%;
+height: 100%;
+overflow: hidden;
+top: 0;
+left: 0;
+z-index: 1;
+pointer-events: none;
+}
+
+.floating-heart {
+position: absolute;
+display: block;
+list-style: none;
+background: rgba(255, 77, 109, 0.4);
+background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='%23ff4d6d'><path d='M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z'/></svg>");
+background-size: contain;
+background-repeat: no-repeat;
+bottom: -50px;
+animation: floatUp 12s linear infinite;
+}
+
+@keyframes floatUp {
+0% { transform: translateY(0) rotate(0deg); opacity: 1; }
+100% { transform: translateY(-120vh) rotate(360deg); opacity: 0; }
+}
+
+.main-card {
+background: rgba(255, 255, 255, 0.88);
+backdrop-filter: blur(12px);
+border-radius: 25px;
+padding: 25px;
+width: 90%;
+max-width: 450px;
+box-shadow: 0 15px 35px rgba(201, 24, 74, 0.2);
+border: 2px solid #fff;
+text-align: center;
+z-index: 10;
+position: relative;
+}
+
+.page {
+display: none;
+animation: fadeIn 0.8s ease forwards;
+}
+
+.page.active {
+display: block;
+}
+
+@keyframes fadeIn {
+from { opacity: 0; transform: translateY(15px); }
+to { opacity: 1; transform: translateY(0); }
+}
+
+h1 { color: var(--pink-deep); margin-bottom: 15px; font-size: 2.2rem; }
+h2 { color: var(--pink-dark); margin-bottom: 20px; font-size: 1.8rem; }
+p { color: #555; line-height: 1.6; margin-bottom: 22px; font-size: 1.05rem; }
+
+.btn {
+background: linear-gradient(45deg, var(--pink-dark), var(--pink-deep));
+color: white;
+border: none;
+padding: 14px 32px;
+font-size: 1.05rem;
+border-radius: 50px;
+cursor: pointer;
+box-shadow: 0 5px 15px rgba(201, 24, 74, 0.3);
+transition: transform 0.2s, box-shadow 0.2s;
+font-weight: bold;
+}
+
+.btn:hover {
+transform: translateY(-2px);
+box-shadow: 0 8px 22px rgba(201, 24, 74, 0.45);
+}
+
+.single-img {
+width: 100%;
+height: 320px;
+object-fit: cover;
+border-radius: 20px;
+margin-bottom: 20px;
+border: 4px solid white;
+box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+background-color: #ffe3ec;
+}
+
+.collage-grid {
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+gap: 12px;
+margin-bottom: 20px;
+}
+
+.collage-grid img {
+width: 100%;
+height: 160px;
+object-fit: cover;
+border-radius: 12px;
+border: 3px solid white;
+box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+background-color: #ffe3ec;
+}
+
+.cards-grid {
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+gap: 12px;
+margin-bottom: 25px;
+}
+
+.secret-card {
+background: linear-gradient(135deg, #ffb3c6, #ff4d6d);
+color: white;
+height: 80px;
+display: flex;
+justify-content: center;
+align-items: center;
+font-size: 1.8rem;
+font-weight: bold;
+border-radius: 15px;
+cursor: pointer;
+transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+box-shadow: 0 5px 10px rgba(0,0,0,0.08);
+}
+
+.secret-card.revealed {
+background: #fff;
+color: var(--pink-deep);
+font-size: 0.95rem;
+padding: 10px;
+border: 2px solid var(--pink-medium);
+font-weight: 600;
+}
+
+.gift-box {
+font-size: 5.5rem;
+cursor: pointer;
+animation: bounce 0.8s infinite alternate;
+margin: 20px 0;
+display: inline-block;
+}
+
+@keyframes bounce {
+from { transform: translateY(0); }
+to { transform: translateY(-12px); }
+}
+</style>
+</head>
+<body>
+
+<div class="hearts-bg" id="heartsBg"></div>
+
+<div class="main-card">
+<div class="page active" id="page1">
+<h1>Hyy Hafsa ❤️</h1>
+<img src="https://images2.imgbox.com/71/61/c2pXscfN_o.png" class="single-img" alt="Hafsa Main Pic">
+<p>Happy Birthday! Today is all about celebrating you and the beautiful energy you bring into the world. Here’s a little collection of some of your best moments — a small gift for someone who deserves nothing but the best</p>
+<button class="btn" onclick="nextPage(2)">Open Memories ✨</button>
+</div>
+
+<div class="page" id="page2">
+<h2>Birthday Memories 📸</h2>
+<div class="collage-grid">
+<img src="https://images2.imgbox.com/39/b0/P3oD5Zid_o.png" alt="Memory 1">
+<img src="https://images2.imgbox.com/5c/6a/N1P1V5tY_o.png" alt="Memory 2">
+<img src="https://images2.imgbox.com/e2/2e/yP5Q8YgZ_o.png" alt="Memory 3">
+<img src="https://images2.imgbox.com/71/61/c2pXscfN_o.png" alt="Memory 4">
+</div>
+<p>Seeing you smile makes everything perfect. Thank you for bringing so much joy into my life and for being the wonderful person you are.</p>
+<button class="btn" onclick="nextPage(3)">Read My Heart 💖</button>
+</div>
+
+<div class="page" id="page3">
+<h2>Why You're Special 🌟</h2>
+<img src="https://images2.imgbox.com/39/b0/P3oD5Zid_o.png" class="single-img" alt="Hafsa Special Pic">
+<p>Click on the cards to reveal why you are the absolute best!</p>
+<div class="cards-grid">
+<div class="secret-card" onclick="revealCard(this, 'Your Beautiful Eyes 🥺')">?</div>
+<div class="secret-card" onclick="revealCard(this, 'The Way You Smile 😊')">?</div>
+<div class="secret-card" onclick="revealCard(this, 'Most Caring Soul ❤️')">?</div>
+<div class="secret-card" onclick="revealCard(this, 'Cute Pout & Moods 😙')">?</div>
+</div>
+<button class="btn" onclick="nextPage(4)">Next Surprise 🎁</button>
+</div>
+
+<div class="page" id="page4">
+<h2>The Final Surprise</h2>
+<img src="https://images2.imgbox.com/5c/6a/N1P1V5tY_o.png" class="single-img" style="height:250px;" alt="Hafsa Gift Pic">
+<p>Tap the gift box below to open your final birthday wish!</p>
+<div class="gift-box" id="gift" onclick="openGift()">🎁</div>
+
+<div id="finalWish" style="display:none; margin-top: 20px;">
+<h1 style="font-size: 2.3rem; animation: bounce 0.5s infinite alternate;">Happy birthday hafsa</h1>
+<p style="font-weight: 600; color: var(--pink-deep); margin-bottom: 10px;">I love you more than words can say! 💞✨</p>
+<p>May this year be filled with unforgettable memories and pure happiness. You are the most special person in my life, Hafsa, and I promise to always be there to make you smile. You deserve the best today and always! 🥳🎂</p>
+</div>
+</div>
+</div>
+
+<script>
+function nextPage(pageNumber) {
+document.querySelectorAll('.page').forEach(page => page.classList.remove('active'));
+document.getElementById('page' + pageNumber).classList.add('active');
+}
+
+function revealCard(element, message) {
+element.classList.add('revealed');
+element.innerText = message;
+element.onclick = null;
+}
+
+function openGift() {
+document.getElementById('gift').innerText = '💖';
+document.getElementById('finalWish').style.display = 'block';
+setTimeout(() => {
+document.getElementById('finalWish').scrollIntoView({ behavior: 'smooth' });
+}, 100);
+}
+
+const heartsBg = document.getElementById('heartsBg');
+for (let i = 0; i < 25; i++) {
+const heart = document.createElement('div');
+heart.classList.add('floating-heart');
+heart.style.left = Math.random() * 100 + '%';
+heart.style.width = heart.style.height = (Math.random() * 18 + 14) + 'px';
+heart.style.animationDelay = Math.random() * 8 + 's';
+heart.style.animationDuration = (Math.random() * 6 + 8) + 's';
+heartsBg.appendChild(heart);
+}
+</script>
+</body>
+</html>
