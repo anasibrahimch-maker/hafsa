@@ -29,7 +29,6 @@ overflow-x: hidden;
 position: relative;
 }
 
-/* Floating Hearts Background */
 .hearts-bg {
 position: absolute;
 width: 100%;
@@ -58,7 +57,6 @@ animation: floatUp 12s linear infinite;
 100% { transform: translateY(-120vh) rotate(360deg); opacity: 0; }
 }
 
-/* Container Main Card */
 .main-card {
 background: rgba(255, 255, 255, 0.88);
 backdrop-filter: blur(12px);
@@ -112,12 +110,12 @@ box-shadow: 0 8px 22px rgba(201, 24, 74, 0.45);
 .single-img {
 width: 100%;
 height: 320px;
-object-fit: contain;
+object-fit: cover;
 border-radius: 20px;
 margin-bottom: 20px;
 border: 4px solid white;
 box-shadow: 0 8px 16px rgba(0,0,0,0.1);
-background: linear-gradient(45deg, #ffe5ec, #ffb3c6);
+background-color: #ffe3ec;
 }
 
 .collage-grid {
@@ -130,14 +128,13 @@ margin-bottom: 20px;
 .collage-grid img {
 width: 100%;
 height: 160px;
-object-fit: contain;
+object-fit: cover;
 border-radius: 12px;
 border: 3px solid white;
 box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-background: linear-gradient(45deg, #ffe5ec, #ffb3c6);
+background-color: #ffe3ec;
 }
 
-/* Secret Cards Grid */
 .cards-grid {
 display: grid;
 grid-template-columns: repeat(2, 1fr);
@@ -188,10 +185,9 @@ to { transform: translateY(-12px); }
 <div class="hearts-bg" id="heartsBg"></div>
 
 <div class="main-card">
-
 <div class="page active" id="page1">
 <h1>Hyy Hafsa ❤️</h1>
-<img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='75'>👑</text></svg>" class="single-img" alt="Birthday Queen">
+<img src="https://images2.imgbox.com/71/61/c2pXscfN_o.png" class="single-img" alt="Hafsa Main Pic">
 <p>Happy Birthday! Today is all about celebrating you and the beautiful energy you bring into the world. Here’s a little collection of some of your best moments — a small gift for someone who deserves nothing but the best</p>
 <button class="btn" onclick="nextPage(2)">Open Memories ✨</button>
 </div>
@@ -199,10 +195,10 @@ to { transform: translateY(-12px); }
 <div class="page" id="page2">
 <h2>Birthday Memories 📸</h2>
 <div class="collage-grid">
-<img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='75'>🌸</text></svg>" alt="Memory 1">
-<img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='75'>🎈</text></svg>" alt="Memory 2">
-<img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='75'>🧸</text></svg>" alt="Memory 3">
-<img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='75'>🎉</text></svg>" alt="Memory 4">
+<img src="https://images2.imgbox.com/39/b0/P3oD5Zid_o.png" alt="Memory 1">
+<img src="https://images2.imgbox.com/5c/6a/N1P1V5tY_o.png" alt="Memory 2">
+<img src="https://images2.imgbox.com/e2/2e/yP5Q8YgZ_o.png" alt="Memory 3">
+<img src="https://images2.imgbox.com/71/61/c2pXscfN_o.png" alt="Memory 4">
 </div>
 <p>Seeing you smile makes everything perfect. Thank you for bringing so much joy into my life and for being the wonderful person you are.</p>
 <button class="btn" onclick="nextPage(3)">Read My Heart 💖</button>
@@ -210,7 +206,7 @@ to { transform: translateY(-12px); }
 
 <div class="page" id="page3">
 <h2>Why You're Special 🌟</h2>
-<img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='75'>✨</text></svg>" class="single-img" alt="Special Card">
+<img src="https://images2.imgbox.com/39/b0/P3oD5Zid_o.png" class="single-img" alt="Hafsa Special Pic">
 <p>Click on the cards to reveal why you are the absolute best!</p>
 <div class="cards-grid">
 <div class="secret-card" onclick="revealCard(this, 'Your Beautiful Eyes 🥺')">?</div>
@@ -223,7 +219,7 @@ to { transform: translateY(-12px); }
 
 <div class="page" id="page4">
 <h2>The Final Surprise</h2>
-<img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='75'>🎂</text></svg>" class="single-img" style="height:250px;" alt="Birthday Cake">
+<img src="https://images2.imgbox.com/5c/6a/N1P1V5tY_o.png" class="single-img" style="height:250px;" alt="Hafsa Gift Pic">
 <p>Tap the gift box below to open your final birthday wish!</p>
 <div class="gift-box" id="gift" onclick="openGift()">🎁</div>
 
@@ -233,7 +229,6 @@ to { transform: translateY(-12px); }
 <p>May this year be filled with unforgettable memories and pure happiness. You are the most special person in my life, Hafsa, and I promise to always be there to make you smile. You deserve the best today and always! 🥳🎂</p>
 </div>
 </div>
-
 </div>
 
 <script>
@@ -269,3 +264,4 @@ heartsBg.appendChild(heart);
 </script>
 </body>
 </html>
+
